@@ -1,0 +1,81 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+        <div class="facts-container-1">
+            <div class="facts-container-2">
+                <div class="facts-container-image-1">
+                    <div class="image-1">
+                        <img class="image1" src="{{posts.image.url}}" style="max-width: 500px; max-height: 500px;" alt="">
+                    </div>
+                    <div class="text-1">
+                        <div class="fact-1-header">
+                            <h2>{{posts.title}}</h2>
+                        </div>
+                        <hr>
+                        <div style="margin-top: 15px;">
+                            <h2 style="font-size: 18px;">Description : </h2>
+                            <p style="font-size: 19px;">{{posts.description}}</p> 
+                            
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <h2 style="font-size: 18px;">Seller : </h2>
+                            <p style="font-size: 17px; ">{{posts.customer}}</p>  
+                            
+                        </div>
+                        <div style="margin-top: 15px; display: flex;">
+                            <div><a href="{% url 'product-home' %}" class="btn btn-outline-dark" style="font-size: 19px">Buy now</a></div>
+                            <div style="margin-left: 20px ;"><a href="{% url 'product-home' %}" class="btn btn-outline-dark" style="font-size: 19px">&#x2190; Continue Shopping</a></div>   
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            img{
+                transition: box-shadow .3s;
+            }
+            img:hover{ 
+                box-shadow: 0 0 20px rgba(0,0,0,.3);
+        
+            }
+
+            .facts-container-2{
+                
+
+                background: #fff;
+                
+
+            }
+
+            .facts-container-1{
+
+                padding: 2rem 1.2rem;
+                margin-top: 40px;
+                margin-bottom: 0;
+                background-color: #f2f2f2;
+            }
+
+            .facts-container-image-1{
+                display: flex;
+                width: 100%;
+            }
+            .image-1{
+                position: relative;
+                padding: 2%;
+            }
+            .text-1{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 2%;
+                object-position: center;
+            }
+            .fact-1-header{
+                margin-bottom: 2%;
+            }
+        
+        </style>      
+
+{% endblock content %}
