@@ -1,0 +1,58 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+        <div class="facts-container-1">
+            <div class="facts-container-2">
+                <img src="{{blogs.image.url}}" style="height: 600px; width:100%;  margin: 10px;">
+                <div style="margin-top:1.5%">
+                    <h2 style="text-align: center;">{{blogs.title}}</h2>
+                </div>
+                
+                <br>
+                <div style="margin:15px">
+                    <p>{{blogs.description}}</p>
+                </div>
+                
+                <br>
+                <p style="padding:5px; padding-left:10px">author : {{blogs.author}}</p>
+            </div>
+        </div>
+        <style>
+
+
+            .facts-container-2{
+                
+
+                background: #fff;
+                
+
+            }
+
+            .facts-container-1{
+
+                padding: 2rem 1.2rem;
+                margin-top: 40px;
+                margin-bottom: 0;
+                background-color: #f2f2f2;
+            }
+
+            .facts-container-image-1{
+                display: flex;
+                width: 100%;
+            }
+            .image-1{
+                position: relative;
+                padding: 2%;
+            }
+            .text-1{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 2%;
+                object-position: center;
+            }
+            .fact-1-header{
+                margin-bottom: 2%;
+            }
+        </style>
+{% endblock content %}

@@ -3,7 +3,7 @@
 <div class="conatiner-fluid mt-3" style="margin-left: 10px;">
     <div class="row mx-auto">
         {%for blog in blogs%}
-        <div class="card">
+        <div class="card mb-3">
           <div class="inner-card">
             <div class="img-wrapper">
               <img src="{{blog.image.url}}" alt="">
@@ -13,7 +13,7 @@
               <p>{{blog.cardDescription}}</p>
             </div>
             <div class="btn-wrapper">
-              <button class="view-btn" data-src="https://source.unsplash.com/collection/190727/900x600">View</button>
+              <button class="view-btn" data-src="https://source.unsplash.com/collection/190727/900x600" ><a href="{% url 'ViewBlog' blog.id %}">View</a></button>
             </div>
           </div>
         </div>
